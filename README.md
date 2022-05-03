@@ -138,7 +138,7 @@ To compute the functional diversity metrics, we create a function called ```.fdm
 
 #
 ```
-We run the function on the empirical dataset by calling
+We run the function on the empirical dataset by calling:
 
 ```{r}
 obsFD<- .fdmetrics(df = df0 , #dataframe of relative abundances with dimensions time x ecocodes
@@ -267,7 +267,7 @@ To run null models we create a function that parallelize the process
  We run the null models code by calling:
  
     ```{r}
-    rep.nulls<-5000 #using 24 cores lasts 100rep/10min
+    rep.nulls<-5000
     method.nulls<- 'r0_samp'  #for other methods see ?commsim
     nm<-nullmodel(df0,method.nulls)  ## Df of counts NOT proportional abundance
     null<-simulate(nm, nsim =rep.nulls)
