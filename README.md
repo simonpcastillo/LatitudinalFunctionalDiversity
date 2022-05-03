@@ -4,7 +4,7 @@
 
 Contact: [Felipe Opazo-Mella](felipe.opazomella@gmail.com)
 
-The complete routine is available in [](function/main.R). It can be opened using the R envrionment.
+The complete routine is available in function/main.R it can be opened downloading the whole repo and using the available R enviroment.
 
 #### 0. Preamble
 To load the necessary packages to run this analysis, we use the pacman package
