@@ -3,6 +3,7 @@
 ### Authors: D. Herrera, S. A. Navarrete, F. Labra, S. P. Castillo, L. F. Opazo
 
 Contact: [Felipe Opazo-Mella](felipe.opazomella@gmail.com)
+Repository maintaner: [Simon P. Castillo](simon.castillo@icr.ac.uk)
 
 The complete routine is available in function/main.R it can be opened downloading the whole repo and using the available R enviroment.
 All the codes and outputs -including null models results- are avalible in the [drive folder](https://drive.google.com/drive/folders/1BKJpW3I3InCsigit8RL1H7ZfRCpYx1lG?usp=sharing)
@@ -272,8 +273,6 @@ To run null models we create a function that parallelize the process
     nm<-nullmodel(df0,method.nulls)  ## Df of counts NOT proportional abundance
     null<-simulate(nm, nsim =rep.nulls)
 
-
-
       nulldf<- .nulls(null0 = null,
                 rep.nulls,
                 maxPcoa = 10, nPC=4,
@@ -284,7 +283,7 @@ To run null models we create a function that parallelize the process
                 numCores= 20) #parallel::detectCores() detect your number of cores, NOT SUGGESTED TO RUN AT MAX NUMBER OF CORES
 
     write.csv(nulldf, file='data_output/allnull.csv')
-    ```
+```
 
 #### 4. Outputs
 
