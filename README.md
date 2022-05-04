@@ -288,7 +288,7 @@ Note that to paralellise, you need to declare the number of cores you will use. 
 
 #### 4. Outputs
 
-Each time we ran the whole analysis (e.g., ```source(main.R)```), a file is created in the ```data_output``` folder. Additionally, we created a function that summariseds the data from the null models:
+Each time we ran the whole analysis (e.g., ```source(main.R)```), a file is created in the ```data_output``` folder (available at the [drive folder](https://drive.google.com/drive/folders/1BKJpW3I3InCsigit8RL1H7ZfRCpYx1lG?usp=sharing)). Additionally, we created a function that summarises the data from the null models:
 ```{r}
 .nullsummary<-function(truenull){
   
