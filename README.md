@@ -266,7 +266,7 @@ To run null models we create a function that parallelize the process
 
  We run the null models code by calling:
  
-    ```{r}
+```{r}
     rep.nulls<-5000
     method.nulls<- 'r0_samp'  #for other methods see ?commsim
     nm<-nullmodel(df0,method.nulls)  ## Df of counts NOT proportional abundance
