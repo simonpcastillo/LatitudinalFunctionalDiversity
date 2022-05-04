@@ -2,8 +2,9 @@
 
 #### Authors: D. Herrera, S. A. Navarrete, F. Labra, S. P. Castillo, L. F. Opazo
 
-Contact: [Felipe Opazo-Mella](felipe.opazomella@gmail.com)
-Repository maintaner: [Simon P. Castillo](simon.castillo@icr.ac.uk)
+Contact: [Felipe Opazo-Mella](mailto:felipe.opazomella@gmail.com)
+
+Repository maintaner: [Simon P. Castillo](mailto:simon.castillo@icr.ac.uk)
 
 The complete routine is available in function/main.R it can be opened downloading the whole repo and using the available R enviroment.
 All the codes and outputs -including null models results- are avalible in the [drive folder](https://drive.google.com/drive/folders/1BKJpW3I3InCsigit8RL1H7ZfRCpYx1lG?usp=sharing)
