@@ -9,11 +9,11 @@ The complete routine is available in function/main.R it can be opened downloadin
 All the codes and outputs -including null models results- are avalible in the [drive folder](https://drive.google.com/drive/folders/1BKJpW3I3InCsigit8RL1H7ZfRCpYx1lG?usp=sharing)
 
 #### 0. Preamble
-To load the necessary packages to run this analysis, we use the pacman package
+To load the necessary packages to run this analysis, we call the pacman package
 ```{r}
 if (!require("pacman")) install.packages("pacman")
 
-pacman::p_load(foreach,doParallel, vegan, SYNCSA, tidyr,tseries,strucchange, svMisc, dplyr, mFD)
+pacman::p_load(foreach,doParallel, vegan, SYNCSA, tidyr, tseries, strucchange, svMisc, dplyr, mFD)
 ```
 We also define useful functions available in this repository:
 ```{r}
@@ -26,14 +26,14 @@ Finally, we create folder for the output files:
 dir.create('data_output')
 ```
 #### 1. Load data
-The dataset used in this pipeline and in the manuscript is available and it is loaded into the routine via
+The dataset used in this pipeline and in the manuscript is available and it is loaded into the routine via:
 ```{r}
 df0=read.csv('data_input/latdata.csv', check.names = F, row.names = 1)
 
 ```
 
-#### 2. Observed funcitonal diversity metrics
-To compute the functional diversity metrics, we create a function called ```.fdmetrics``` depending upon the ```mFD``` package:
+#### 2. Observed functional diversity metrics
+To compute the functional diversity metrics, we create a function called ```.fdmetrics()``` depending of the ```mFD``` package:
 
 ```{r}
 
@@ -157,7 +157,7 @@ write.csv(pc_axes, file='data_output/pc_axes.csv') #save values of PCA's axes se
 ```
 
 #### 3. Null models
-To run null models we create a function that parallelize the process
+To run null models we create a function that parallelize the process:
 
 ```{r, tidy=TRUE, tidy.opts=list(width.cutoff=60)}
 .nulls<- function(null0, rep.nulls, maxPcoa, nPC, features, nom.features, ord.features, quan.features, numCores){
@@ -265,7 +265,7 @@ To run null models we create a function that parallelize the process
 }
 ```
 
- We run the null models code by calling:
+Note that to paralellise, you need to declare the number of cores you will use. To find how many cores your machine has, call ```parallel::detectCores()```. Be careful of not using all your cores, because you computer will stop eorking. We run the null models code by calling:
  
 ```{r}
     rep.nulls<-5000
